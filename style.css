@@ -1,0 +1,167 @@
+body {
+  background-color: #CAEFFF;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #34495e;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #34495e;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+ul.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+ul.menu li {
+  margin-right: 10px;
+}
+
+ul.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.burger-icon {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.burger-icon:before,
+.burger-icon:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+.burger-icon:before {
+    top: -6px;
+}
+.burger-icon:after {
+    top: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    ul.menu {
+        display: none;
+    }
+    .menu-toggle {
+        outline: none;
+    }
+    .menu-toggle:focus . burger-icon {
+        background-color: #ccc;
+    }
+    .menu-toggle:focus .burger-icon:before {
+        transform: translateY(6px) rotate (45deg);
+    }
+    .menu-toggle:focus .burger-icon:after {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+    .menu-toggle:focus + ul.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    }
+  .menu-toggle:focus + ul.menu li {
+    margin-bottom: 10px;
+    }
+
+  .menu-toggle:focus + ul.menu li:last-child {
+    margin-bottom: 0;
+    }
+
+  .menu-toggle:focus + ul.menu li a {
+    color: #fff;
+    }
+}
+
+/* Section styles */
+section {
+  padding: 40px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 
+    0 0 10px rgba(0,0,0,0.2),
+    0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Project styles */
+.project {
+  margin-bottom: 20px;
+  padding: 5px;
+  margin: 5px;
+  background-color: #3498DB;
+  box-shadow:
+  0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Footer styles */
+footer {
+  background-color: #34495e;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Under Maintenance */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.close-button {
+  background-color: #34495e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
